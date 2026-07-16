@@ -1,34 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_light"
-    android:orientation="vertical"
-    android:padding="20dp">
+    android:background="#F5F7FA"
+    android:orientation="vertical">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="18dp"
         app:cardBackgroundColor="#2C3E50"
         app:cardCornerRadius="24dp"
-        android:layout_marginTop="20dp"
-        app:cardElevation="4dp">
-
+        app:cardElevation="6dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="24dp">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="👋 Inventory"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -42,13 +40,13 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="18dp"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="16dp"
         app:cardElevation="0dp"
-        app:strokeColor="@color/card_border"
+        app:strokeColor="#E0E0E0"
         app:strokeWidth="1dp">
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -56,56 +54,48 @@
             android:drawableStart="@android:drawable/ic_menu_search"
             android:drawablePadding="12dp"
             android:hint="Search products..."
-            android:paddingHorizontal="20dp"
-            android:inputType="text" />
+            android:paddingHorizontal="20dp" />
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/btnAddProduct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="?attr/selectableItemBackground"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="16dp"
         app:cardElevation="0dp"
-        app:strokeColor="@color/rich_blue"
+        app:strokeColor="#2C3E50"
         app:strokeWidth="2dp">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:padding="20dp">
-
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:background="#E8EDF4"
-                android:padding="8dp"
-                android:src="@android:drawable/ic_input_add"
-                app:tint="@color/rich_blue" />
-
+                android:src="@android:drawable/ic_input_add" />
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_weight="1"
                 android:text="Add New Product"
-                android:textColor="@color/rich_blue"
+                android:textStyle="bold"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textColor="#2C3E50"/>
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginHorizontal="10dp"
         android:id="@+id/rvInventoryList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="20dp"
         android:clipToPadding="false"
+        android:paddingHorizontal="20dp"
         android:paddingBottom="20dp" />
 </LinearLayout>
