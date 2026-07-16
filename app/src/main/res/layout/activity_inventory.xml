@@ -13,6 +13,7 @@
         android:layout_marginBottom="24dp"
         app:cardBackgroundColor="#2C3E50"
         app:cardCornerRadius="24dp"
+        android:layout_marginTop="20dp"
         app:cardElevation="4dp">
 
         <LinearLayout
@@ -99,4 +100,12 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvInventoryList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp" />
 </LinearLayout>
