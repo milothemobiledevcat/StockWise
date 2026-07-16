@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_light"
     android:orientation="vertical"
     android:padding="20dp">
 
-    <!-- Header Card -->
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,14 +35,6 @@
                 android:textColor="#FFFFFF"
                 android:textSize="28sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Organize and track your products"
-                android:textColor="#C0CCD6"
-                android:textSize="14sp" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -61,6 +52,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@null"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:drawablePadding="12dp"
             android:hint="Search products..."
             android:paddingHorizontal="20dp"
             android:inputType="text" />
@@ -72,11 +65,12 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="16dp"
         app:cardElevation="0dp"
-        app:strokeColor="@color/card_border"
-        app:strokeWidth="1dp">
+        app:strokeColor="@color/rich_blue"
+        app:strokeWidth="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -99,9 +93,9 @@
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
                 android:text="Add New Product"
-                android:textColor="#333333"
+                android:textColor="@color/rich_blue"
                 android:textSize="18sp"
-                android:textStyle="normal" />
+                android:textStyle="bold" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
